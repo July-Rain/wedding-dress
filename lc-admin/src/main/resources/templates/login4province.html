@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>${sysMgtIndexPageTitle}</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel = "Shortcut Icon" href="${request.contextPath}/statics/images/favicon.ico">
+  <link rel="stylesheet" href="${request.contextPath}/statics/css/bootstrap.min.css">
+  <link rel="stylesheet" href="${request.contextPath}/statics/css/font-awesome.min.css">
+
+  <!-- 引入element-ui样式 -->
+  <link rel="stylesheet" href="${request.contextPath}/statics/plugins/element/element.css">
+
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="${request.contextPath}/statics/css/all-skins.min.css">
+  <link rel="stylesheet" href="${request.contextPath}/statics/css/login.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="${request.contextPath}/statics/plugins/IE9/html5shiv.min.js"></script>
+  <script src="${request.contextPath}/statics/plugins/IE9/respond.min.js"></script>
+  <![endif]-->
+    <script src="${request.contextPath}/statics/js/common.js"></script>
+</head>
+<body class="hold-transition login-page">
+<div class="login-box" id="rrapp" v-cloak>
+
+  <!-- /.login-logo -->
+    <div class="login-box-body">
+        <div class="pull-left">
+            <div class="left-con">
+                <p><img src="${request.contextPath}/statics/images/login.png"></p>
+                <p class="logintit">${sysMgtLoginPageTitle}</p>
+                <p>从这里开始...</p>
+            </div>
+        </div>
+        <div class="pull-right">
+            <div class="right-con">
+                <p class="login-box-msg">用户登录</p>
+                <!--<div v-if="error" class="alert alert-danger alert-dismissible">-->
+                    <!--<h4 style="margin-bottom: 0px;"><i class="fa fa-exclamation-triangle"></i> {{errorMsg}}</h4>-->
+                <!--</div>-->
+                <div class="form-group has-feedback">
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                    <input type="text" class="form-control" v-model="username" value="" placeholder="账号">
+                </div>
+                <div class="form-group has-feedback">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                    <input type="password" class="form-control" v-model="password" value="" placeholder="密码">
+                </div>
+                <!--<div class="form-group has-feedback">-->
+                    <!--<input type="text" class="form-control" v-model="captcha" @keyup.enter="login" placeholder="验证码">-->
+                    <!--<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>-->
+                <!--</div>-->
+                <!--<div class="form-group has-feedback">-->
+                    <!--<img alt="如果看不清楚，请单击图片刷新！" class="pointer" :src="src" @click="refreshCode">-->
+                    <!--&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" @click="refreshCode">点击刷新</a>-->
+                <!--</div>-->
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <el-checkbox v-model="checked" style="padding-left: 0px;margin-bottom: 10px">记住密码</el-checkbox>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-lg-12">
+                        <button type="button" class="btn btn-primary btn-block btn-flat" @click="login">登录</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </div>
+        </div>
+
+    <!-- /.social-auth-links -->
+    </div>
+    <div class="footer">
+        <span>CopyRight @2018 STATE ADMINISTRATION OF WORK SAFETY ALL Rights Reserved</span>
+    </div>
+  <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+<script src="${request.contextPath}/statics/libs/jquery2.min.js"></script>
+<script src="${request.contextPath}/statics/libs/vue.min.js"></script>
+<!-- 引入element-ui组件库 -->
+<script src="${request.contextPath}/statics/plugins/element/element.js"></script>
+<script src="${request.contextPath}/statics/libs/bootstrap.min.js"></script>
+<script src="${request.contextPath}/statics/libs/jquery.slimscroll.min.js"></script>
+<script src="${request.contextPath}/statics/libs/fastclick.min.js"></script>
+<script src="${request.contextPath}/statics/libs/app.js"></script>
+<script src="${request.contextPath}/statics/plugins/layer/layer.js"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(function () {
+        if(top!=self){
+            if(top.location != self.location)
+                top.location=self.location;
+        }
+
+        //页面初始化时，如果帐号密码cookie存在则填充
+        if(getCookie('username') && getCookie('password')){
+            vm.username = getCookie('username');
+            vm.password = getCookie('password');
+            vm.checked = true;
+        }
+
+        //复选框勾选状态发生改变时，如果未勾选则清除cookie
+        $(".el-checkbox input").on("change", function (){
+            if ($(".el-checkbox input[type='checkbox']").is(':checked') == true) {
+                setCookie('username',vm.username,7); //保存密码到cookie，有效期7天
+                setCookie('password',vm.password,7); //保存帐号到cookie，有效期7天
+            } else {
+                delCookie('username');
+                delCookie('password');
+            }
+        });
+    });
+    //设置cookie
+    function setCookie(name,value,day){
+        var date = new Date();
+        date.setDate(date.getDate() + day);
+        document.cookie = name + '=' + value + ';expires='+ date;
+    };
+    //获取cookie
+    function getCookie(name){
+        var reg = RegExp(name+'=([^;]+)');
+        var arr = document.cookie.match(reg);
+        if(arr){
+            return arr[1];
+        }else{
+            return '';
+        }
+    };
+    //删除cookie
+    function delCookie(name){
+        setCookie(name,null,-1);
+    };
+
+
+    var vm = new Vue({
+        el:'#rrapp',
+        data:{
+            username: '',
+            password: '',
+            captcha: '',
+//		error: false,
+//		errorMsg: '',
+            checked: false,
+            src: 'captcha.jpg'
+        },
+        beforeCreate: function(){
+            if(self != top){
+                top.location.href = self.location.href;
+            }
+        },
+        methods: {
+            refreshCode: function(){
+                this.src = "captcha.jpg?t=" + $.now();
+            },
+            login: function (event) {
+                var data = "username="+vm.username+"&password="+vm.password+"&captcha="+vm.captcha;
+                $.ajax({
+                    type: "POST",
+                    url: "sys/login",
+                    data: data,
+                    dataType: "json",
+                    success: function(result){
+                        if(result.code == 0){//登录成功
+                            parent.location.href ='index.html';
+                        }else{
+//						vm.error = true;
+//						vm.errorMsg = result.msg;
+                            layer.alert(result.msg, {
+                                icon: 0,
+                                skin: 'layer-ext-moon',
+                                title: "提示"
+                            });
+                            vm.refreshCode();
+                        }
+                    }
+                });
+            }
+        }
+    });
+</script>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>预约</title>
+    <#include "/header.html">
+</head>
+<body>
+<div id="rrapp" v-cloak>
+    <div v-show="showList">
+        <div class="grid-btn">
+            <a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+            <a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+            <a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+        </div>
+        <table id="jqGrid"></table>
+        <div id="jqGridPager"></div>
+    </div>
+
+    <div v-show="!showList" class="panel panel-default">
+        <div class="panel-heading">{{title}}</div>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-2 control-label">客户姓名</div>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" v-model="sysBook.userName" placeholder="客户姓名"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2 control-label">地址</div>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" v-model="sysBook.userAddress" placeholder="地址"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2 control-label">联系电话</div>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" v-model="sysBook.userPhone" placeholder="联系电话"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2 control-label">预约风格</div>
+                <div class="col-sm-10">
+                    <select class="form-control" v-model="sysBook.bookType" clearable placeholder="预约风格">
+                        <option
+                                v-for="item in typeOptions"
+                                :key="item.code"
+                                :label="item.value"
+                                :value="item.code">
+                        </option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2 control-label">预约摄影师</div>
+                <div class="col-sm-10">
+                    <select class="form-control" v-model="sysBook.bookPersonId" clearable placeholder="预约摄影师">
+                        <option
+                                v-for="item in userOptions"
+                                :key="item.userId"
+                                :label="item.nickName"
+                                :value="item.userId">
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2 control-label">备注</div>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" v-model="sysBook.remark" placeholder="备注"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2 control-label">预约时间</div>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" format="yyyy-MM-dd" value-format="yyyy-MM-dd" v-model="sysBook.bookTime"
+                                    placeholder="预约时间"/>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2 control-label"></div>
+                <input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
+                &nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="${request.contextPath}/statics/js/modules/sys/sysbook.js?_${.now?long}"></script>
+</body>
+</html>

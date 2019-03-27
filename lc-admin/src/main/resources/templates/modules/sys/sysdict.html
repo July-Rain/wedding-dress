@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>字典管理</title>
+    <#include "/header.html">
+</head>
+<body>
+<div id="rrapp" v-cloak>
+    <el-form :inline="true" :model="formInline" class="demo-form-inline" ref="formInline">
+        <el-form-item label="名称" prop="value">
+            <el-input  type="text" v-model="formInline.value" auto-complete="off" placeholder="名称"></el-input>
+        </el-form-item>
+        <el-form-item label="状态" prop="status">
+            <el-select v-model="formInline.status" clearable placeholder="状态">
+                <el-option label="全部" value="" selected="selected"></el-option>
+                <el-option label="正常" value="1"></el-option>
+                <el-option label="注销" value="0"></el-option>
+            </el-select>
+        </el-form-item>
+        <el-form-item>
+            <el-button type="primary" @click="query">搜索</el-button>
+            <el-button @click="resetForm('formInline')">重置</el-button>
+        </el-form-item>
+    </el-form>
+
+    <div v-show="showList">
+        <div class="grid-btn">
+            <a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+            <a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+            <a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+</div>
+<table id="jqGrid"></table>
+<div id="jqGridPager"></div>
+</div>
+
+<div v-show="showList" class="panel panel-default">
+    <el-dialog :title="title" :visible.sync="dialogFormVisible" class="dc-dialog_without inp-lang">
+        <el-form :model="dict">
+
+            <table style="width: 100%">
+                <tbody>
+
+                <tr>
+                    <td>种类编码</td>
+                    <td colspan="2" style="text-align: left;">
+                        <el-input  type="text"  v-model="dict.code" placeholder="字典码"></el-input>
+                    </td>
+                </tr>
+                <tr>
+                    <td >种类名称</td>
+                    <td colspan="2" style="text-align: left;">
+                        <el-input  type="text"  v-model="dict.value" placeholder="字典值"></el-input>
+                    </td>
+                </tr>
+                <!--<tr>
+                    <td >字典名称</td>
+                    <td colspan="2" style="text-align: left;">
+                        <el-input  type="text"  v-model="dict.name" placeholder="字典值"></el-input>
+                    </td>
+                </tr>-->
+                <tr>
+                    <td >类型</td>
+                    <td colspan="2" style="text-align: left;">
+                        <el-input  type="text"  v-model="dict.type" placeholder="字典值"></el-input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>状态</td>
+                    <td colspan="2" style="text-align: left;">
+                        <el-select v-model="dict.status" clearable placeholder="字典代码状态">
+                            <el-option label="正常" key="1" value="1"></el-option>
+                            <el-option label="注销" key="0" value="0"></el-option>
+                        </el-select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>登记人</td>
+                    <td colspan="2" style="text-align: left;">
+                        <input  type="hidden"  v-model="dict.createUser">
+                        <el-input  type="text"  v-model="dict.createUserName" placeholder="字典登记人"></el-input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>登记时间</td>
+                    <td colspan="2" style="text-align: left;">
+                        <el-input  type="text"  v-model="dict.addTime" placeholder="字典登记时间"></el-input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>排序</td>
+                    <td colspan="2" style="text-align: left;">
+                        <el-input  type="text"  v-model="dict.orderNum" placeholder="排序"></el-input>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </el-form>
+        <div slot="footer" class="dialog-footer">
+            <el-button @click="reload">取 消</el-button>
+            <el-button type="primary" @click="saveOrUpdate">确 定</el-button>
+        </div>
+    </el-dialog>
+</div>
+
+<script src="${request.contextPath}/statics/js/modules/sys/sysdict.js?_${.now?long}"></script>
+</body>
+</html>

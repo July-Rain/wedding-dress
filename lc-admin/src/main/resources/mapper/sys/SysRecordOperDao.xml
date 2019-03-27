@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="lc.platform.admin.modules.sys.dao.SysRecordOperDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="lc.platform.admin.modules.sys.entity.SysRecordOperEntity" id="sysRecordOperMap">
+        <result property="id" column="id"/>
+        <result property="tableName" column="table_name"/>
+        <result property="tableId" column="table_id"/>
+        <result property="method" column="method"/>
+        <result property="operSql" column="oper_sql"/>
+        <result property="ip" column="ip"/>
+        <result property="deptId" column="dept_id"/>
+        <result property="lastUpdTime" column="last_upd_time"/>
+        <result property="lastUpdPersonId" column="last_upd_person_id"/>
+        <result property="lastUpdPersonName" column="last_upd_person_name"/>
+    </resultMap>
+
+
+</mapper>

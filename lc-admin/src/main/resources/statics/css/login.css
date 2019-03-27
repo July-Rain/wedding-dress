@@ -1,0 +1,249 @@
+@charset "utf-8";
+html,body{
+    width: 100% !important;
+    height: 100% !important;
+}
+body{
+    background: url("../images/bg.jpg") no-repeat;
+    background-size: cover;
+}
+.city{
+    background: url("../images/bgnew.png") no-repeat;
+}
+.login-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.login-box-body{
+    max-width: 650px;
+    min-width: 540px;
+    width: 100%;
+    height:385px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.6);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.login-box-body>div{
+    width: 50%;
+    padding: 5% 5% 0 5%;
+}
+.pull-left{
+    margin-top: 5%;
+}
+.pull-right {
+    margin-top: 5%;
+}
+.left-con{
+    width:260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(143, 193, 251, 0.16);
+}
+.left-con p{
+    color: #357fd9;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+}
+.left-con p img{
+    margin-top: 10%;
+
+}
+.left-con p.logintit{
+    font-size: 25px;
+    margin-top: 15px;
+}
+.right-con{
+    width: 100%;
+    height: 100%;
+}
+.right-con img{
+    width: 60%;
+}
+.login-box-msg{
+    font-size: 25px;
+    color: #357fd9;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.form-control-feedback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    pointer-events: none;
+    color: #357fd9;
+}
+.has-feedback .form-control {
+    padding-left: 42.5px;
+    border:none;
+    border-bottom: 1px solid #5777af;
+    background: transparent;
+    border-radius: 0px;
+    box-shadow:none;
+}
+.btn-primary{
+    height: 38px;
+}
+.footer{
+    width: 100%;
+    height: 10%;
+    padding: 0 5%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    text-align: center;
+    color: #ffffff;
+}
+.footer span{
+    font-size: 12px;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/*city*/
+.city{
+    min-width: 1200px;
+    min-height: 768px;
+    position: relative;
+}
+.city .login-box{
+    height: 508px;
+    width: 508px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+}
+.city .city-bg:before{
+    content: "安全生产行政执法管理系统";
+    position: absolute;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #297ee5;
+    width: 1082px;
+    text-align: right;
+    padding-right: 538px;
+    top: 50%;
+    left: 36%;
+    transform: translate(-50%,-50%);
+    display:none;
+}
+.city .city-bg{
+    height: 226px;
+    background-color: #c1d8f2;
+    border-bottom: 13px solid #73a1db;
+    border-top: 13px solid #73a1db;
+    width: 100%;
+    border-radius: inherit;
+}
+.tit ,.login{
+    background-color: #2269c6;
+    height: 154px;
+}
+.tit img{
+    width: 68px;
+    height: 68px;
+    margin: 20px 0 13px 0;
+}
+.tit p{
+    height: 38px;
+    font-family: MicrosoftYaHei;
+    font-size: 28px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: 0px;
+    color: #ffffff;
+}
+.content{
+    height: 200px;
+    background-color: #dbeafa;
+}
+.content .form-group{
+    width: 100%;
+    text-align: center;
+}
+.content .form-group label{
+    width: 48px;
+    height: 17px;
+    font-family: MicrosoftYaHei;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 0px;
+    letter-spacing: 0px;
+    color: #092e5f;
+    margin-right: 18px;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 0;
+}
+.content .form-group:nth-child(1){
+    margin-bottom: 18px;
+}
+.content .form-inline{
+    padding-top: 57px;
+}
+.content .form-inline .form-control{
+    width: 300px;
+    display: inline-block;
+}
+.login .login-content{
+    padding-top: 20px;
+}
+.login-content .btn{
+    width: 88px;
+    height: 40px;
+    background-color: #297ee5;
+    border-radius: 4px;
+    margin-left: 33px;
+    font-size: 16px;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary:active:hover{
+    color: #fff;
+    background-color: #368af0;
+    border-color: transparent;
+}
+.login-content .el-checkbox{
+    color: #fff;
+}
+.city .footer{
+    height: auto;
+    margin-bottom: 25px;
+    color: #333333;
+}
+
+/*vue css*/
+[v-cloak] {
+    display: none;
+}
+@media (max-width: 1080px) {
+    .login-box-body{
+        height: 375px;
+    }
+    .pull-left{
+        padding: 5% 2% 5% 3% !important;
+    }
+    .footer span{
+        font-size: 12px;
+    }
+    .left-con p.logintit,.login-box-msg{
+        font-size: 23px;
+    }
+}

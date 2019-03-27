@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<head>
+    <title>婚纱摄影网站</title>
+
+    <#include "/header.html">
+    <link href="${request.contextPath}/statics/sys/css/templatemo_style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="main-container" id="rrapp" >
+    <div class="col-xs-12 visible-sm visible-xs" id="templatemo_mobile_menu_wap">
+        <p id="mobile_menu_btn"> <a href="#"><span class="fa fa-bars"></span></a> </p>
+        <div id="mobile_menu">
+            <ul class="nav nav-pills nav-stacked navbar-collapse in">
+                <li id="page1_link_m" class="active">首页</li>
+                <li id="page2_link_m">服务介绍</li>
+                <li id="page3_link_m">风格展示</li>
+                <li id="page4_link_m">关于我们</li>
+                <li id="page5_link_m">联系我们</li>
+                <li id="page6_link_m">拍摄预定</li>
+                <li><a href="${request.contextPath}/login4province.html" class="external">管理员登陆</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="templatemo-header">
+        <div id="logo" class="pull-left">婚纱摄影网站</div>
+        <nav class="hidden-sm hidden-xs pull-right">
+            <ul>
+                <li id="page1_link" class="active">首页</li>
+                <li id="page2_link">服务介绍</li>
+                <li id="page3_link">风格展示</li>
+                <li id="page4_link">关于我们</li>
+                <li id="page5_link">联系我们</li>
+                <li id="page6_link">拍摄预定</li>
+                <li><a href="${request.contextPath}/login4province.html" class="external">管理员登陆</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="page" id="page1">
+        <h1 class="hide">首页</h1>
+        <div id="slider-controls">
+            <!--Thumbnail Navigation-->
+            <div id="prevthumb"></div>
+            <div id="nextthumb"></div>
+
+            <!--Arrow Navigation-->
+            <a id="prevslide" class="load-item"></a>
+            <a id="nextslide" class="load-item"></a>
+
+            <div id="thumb-tray" class="load-item">
+                <div id="thumb-back"></div>
+                <div id="thumb-forward"></div>
+            </div>
+
+            <!--Time Bar-->
+            <div id="progress-back" class="load-item">
+                <div id="progress-bar"></div>
+            </div>
+
+            <!--Control Bar-->
+            <div id="controls-wrapper" class="load-item">
+                <div id="controls">
+
+                    <a id="play-button"><img id="pauseplay" src="${request.contextPath}/statics/sys/images/pause.png" alt="Play, pause button"/></a>
+
+                    <!--Slide counter-->
+                    <div id="slidecounter">
+                        <span class="slidenumber"></span> / <span class="totalslides"></span>
+                    </div>
+
+                    <!--Slide captions displayed here-->
+                    <div id="slidecaption"></div>
+
+                    <!--Thumb Tray button-->
+                    <a id="tray-button"><img id="tray-arrow" src="${request.contextPath}/statics/sys/images/button-tray-up.png" alt="Thumb tray button"/></a>
+
+                    <!--Navigation-->
+                    <ul id="slide-list"></ul>
+                </div>
+            </div><!--/Thumbnail Navigation-->
+        </div>
+    </section>
+    <section class="page services" id="page2">
+        <h1>服务介绍</h1>
+        <div class="page-container">
+            <div class="templatemo-item">
+                <!-- To change icons, see http://fortawesome.github.io/Font-Awesome/icons/ -->
+                <i class="fa fa-cog rounded"></i>
+                <h3>专业的团队</h3>
+                <p>我们是一群热爱传统文化，热爱生活，又热爱摄影的年轻人。我们专注于记录美的瞬间，履行着文化传承的使命。</p>
+            </div>
+            <div class="templatemo-item">
+                <i class="fa fa-html5 rounded"></i>
+                <h3>精湛的拍摄技术</h3>
+                <p> 构图完整、构图干净、角度到位、角度独特、用光巧妙、作品细腻。</p>
+            </div>
+            <div class="templatemo-item">
+                <i class="fa fa-star rounded"></i>
+                <h3>多样拍摄基地</h3>
+                <p>不同的拍摄场景满足您对爱情的一切美好的愿望，在每个充满幸福的地方记录专属你们的幸福时刻。</p>
+            </div>
+            <div class="templatemo-item">
+                <i class="fa fa-cubes rounded"></i>
+                <h3>透明化消费</h3>
+                <p>每一笔消费都给您透明的账单，让您在一开始选择的时候久确定好全部的费用，全程透明化消费。</p>
+            </div>
+            <div class="templatemo-item">
+                <i class="fa fa-database rounded"></i>
+                <h3>最受欢迎摄影工作室</h3>
+                <p>拥有中式欧式等知名建筑体系，所有的一切经过艺术家的精心设计，形成一幅幅立体的画面。</p>
+            </div>
+            <div class="templatemo-item">
+                <i class="fa fa-mobile rounded"></i>
+                <h3>全国连锁</h3>
+                <p>全国各地多家连锁婚纱摄影拍摄，满足您随时随地的摄影需求，记录您每时每刻的幸福时光。</p>
+            </div>
+        </div>
+    </section>
+    <section class="page team" id="page3">
+        <h1>风格展示</h1>
+        <div class="page-container">
+            <div class="templatemo-item">
+                <img src="${request.contextPath}/statics/sys/images/team/pic1.jpg" alt="Team member 1" class="bordered">
+                <h3>厦门拍摄</h3>
+                <p>厦门这个城市，又名“鹭岛”，城在海上，海在城中。这里有摇摇欲坠的破旧楼舍、红色铺砖的街道；这里还有美丽宁静的岛屿，岛上时常飘出悠扬的钢琴声；这里更有那蓝天白云，大海一望无际，鹭鸟在海上打闹嬉戏……这里有着你心中城市最美的样子</p>
+                <div class="social">
+                </div>
+            </div>
+            <div class="templatemo-item">
+                <img src="${request.contextPath}/statics/sys/images/team/pic2.jpg" alt="Team member 2" class="bordered">
+                <h3>三亚拍摄</h3>
+                <p>三亚在海南岛最南端，被人们称为"东方夏威夷"和"天下第一湾"。她宛如一颗美丽的浮珠镶嵌在南海碧波之中，是中国最南部的热带滨海旅游城市,中国海滨城市,是中国空气质量最好的城市、全国最长寿地区。</p>
+                <div class="social">
+                </div>
+            </div>
+            <div class="templatemo-item">
+                <img src="${request.contextPath}/statics/sys/images/team/pic3.jpg" alt="Team member 3" class="bordered">
+                <h3>婺源拍摄</h3>
+                <p>婺源县，今属江西省上饶市下辖县，是古徽州一府六县之一。位于江西东北部，与皖、浙两省交界，土地面积2967平方公里，其中有林地378万亩，耕地32万亩，素有“八分半山一分田，半分水路和庄园”之称。</p>
+                <div class="social">
+                </div>
+            </div>
+            <div class="templatemo-item">
+                <img src="${request.contextPath}/statics/sys/images/team/pic4.jpg" alt="Team member 2" class="bordered">
+                <h3>湘潭拍摄</h3>
+                <p>湘潭从南朝开始建县，距今已有1500多年，是湖湘文化的重要发祥地、中国红色文化的摇篮，有“小南京”、“金湘潭”的美誉。“湘中灵秀千秋水，天下英雄一郡多”</p>
+                <div class="social">
+                </div>
+            </div>
+            <div class="templatemo-item">
+                <img src="${request.contextPath}/statics/sys/images/team/pic5.jpg" alt="Team member 3" class="bordered">
+                <h3>吉安拍摄</h3>
+                <p>吉安，古称庐陵、吉州，元初取“吉泰民安”之意改称吉安，江西省地级市，长江中游城市群重要成员，位于江西省中部，赣江中游，西接湖南省，南揽罗霄山脉中段，据富饶的吉泰平原，是江西建制最早的古郡之一，是赣文化发源地之一。</p>
+
+                <div class="social">
+                </div>
+            </div>
+            <div class="templatemo-item">
+                <img src="${request.contextPath}/statics/sys/images/team/pic6.jpg" alt="Team member 1" class="bordered">
+                <h3>仙女湖拍摄</h3>
+                <p>仙女湖四季分明，气候十分宜人，全年平均气温17℃，日照1677.4小时，降雨量1532毫米，无霜期265天，相对温度70%，具有丰富的自然、人文景观资源和历史文化内涵。</p>
+
+                <div class="social">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page" id="page4">
+        <div class="page-container">
+            <div class="page-content padding">
+                <h1>关于我们</h1>
+                <p>婚纱摄影是为客户量身打造，服务，品质，销售于一体的婚纱摄影。摄影为讲究品牌、注重品质的顾客，精心打造世界一流的婚纱照，为顾客提供专业/优质/可靠的放大精品、周边系列产品，以及丰富的婚礼解决方案，并提供专业而便捷的延伸服务，使顾客充分享受时尚、专业、舒适的拍摄过程。 摄影主营婚纱照、全家福、写真、商业摄影、婚礼跟妆跟拍等，为顾客提供高品质的拍摄，产品品质和可信赖的服务。</p>
+                <p>拍摄婚纱照就是在拍摄爱情，我们的团队的每个成员都以往能够为相爱的你们定格美丽的爱情，我们不断努力提升品质和服务，追求卓越的脚步永不停歇。</p>
+                <img src="${request.contextPath}/statics/sys/images/about/about.jpg" alt="about" class="bordered">
+            </div>
+        </div>
+    </section>
+    <section class="page contact" id="page5">
+        <div class="page-container" >
+            <div class="page-content padding" align="center">
+                <h1>关于我们</h1>
+                <p>联系人：张三</p>
+                <p>联系电话：15911111111</p>
+                <p>联系QQ：15911111111</p>
+                <p>联系微信：15911111111</p>
+                <p>官方微博：婚纱摄影</p>
+                <img src="${request.contextPath}/statics/sys/images/about/about.jpg" alt="about" class="bordered">
+            </div>
+        </div>
+    </section>
+    <section class="page contact" id="page6">
+        <div class="page-container" >
+            <div class="page-content padding">
+                <h1>拍摄预定</h1>
+                <p>如果您需要预约，请认真填写一下预约单</p>
+                <div class="map-contact-container">
+                    <div class="contact-form">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-3 control-label">客户姓名</div>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" v-model="sysBook.userName" placeholder="客户姓名"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 control-label">地址</div>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" v-model="sysBook.userAddress" placeholder="地址"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 control-label">联系电话</div>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" v-model="sysBook.userPhone" placeholder="联系电话"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 control-label">预约风格</div>
+                                    <div class="col-sm-7">
+                                        <select style="margin-bottom: 20px;" class="form-control" v-model="sysBook.bookType" clearable placeholder="预约风格">
+                                            <option
+                                                    v-for="item in typeOptions"
+                                                    :key="item.code"
+                                                    :label="item.value"
+                                                    :value="item.code">
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 control-label">预约摄影师</div>
+                                    <div class="col-sm-7">
+                                        <select style="margin-bottom: 20px;" class="form-control" v-model="sysBook.bookPersonId" clearable placeholder="预约摄影师">
+                                            <option
+                                                    v-for="item in userOptions"
+                                                    :key="item.userId"
+                                                    :label="item.nickName"
+                                                    :value="item.userId">
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 control-label">备注</div>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" v-model="sysBook.remark" placeholder="备注"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 control-label">预约时间</div>
+                                    <div class="col-sm-7">
+                                        <input type="date" class="form-control" format="yyyy-MM-dd" value-format="yyyy-MM-dd" v-model="sysBook.bookTime"
+                                               placeholder="预约时间"/>
+
+                                    </div>
+                                </div>
+                                <div class="form-group" style="width: 700px;">
+                                    <div class="col-sm-2 control-label"></div>
+                                    <input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
+                                    &nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="取消"/>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer code is injected from "js/templatemo_script.js", change at line 32 -->
+</div>
+<script src="${request.contextPath}/statics/sys/js/jquery.easing-1.3.js"></script>
+<script src="${request.contextPath}/statics/sys/js/plugins.js"></script>
+<script src="${request.contextPath}/statics/js/modules/sys/sysindex.js"></script>
+<script type="text/javascript">
+    /* www.buildinternet.com/project/supersized
+    ------------------------------------------- */
+    jQuery(function ($) {
+        // load gallery
+        $.supersized({
+            // Functionality
+            slide_interval: 5000, // Length between transitions
+            transition: 1, // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+            transition_speed: 700, // Speed of transition
+
+            // Components
+            slide_links: 'blank', // Individual links for each slide (Options: false, 'num', 'name', 'blank')
+            slides: [ // Slideshow Images
+                {
+                    image: '${request.contextPath}/statics/sys/images/slider/slide-1.jpg', title: 'Image 1', thumb : '${request.contextPath}/statics/sys/images/slider/thumb-1.jpg'
+                }, {
+                    image: '${request.contextPath}/statics/sys/images/slider/slide-2.jpg', title: 'Image 2', thumb : '${request.contextPath}/statics/sys/images/slider/thumb-2.jpg'
+                }, {
+                    image: '${request.contextPath}/statics/sys/images/slider/slide-3.jpg', title: 'Image 3', thumb : '${request.contextPath}/statics/sys/images/slider/thumb-3.jpg'
+                }, {
+                    image: '${request.contextPath}/statics/sys/images/slider/slide-4.jpg', title: 'Image 4', thumb : '${request.contextPath}/statics/sys/images/slider/thumb-4.jpg'
+                }, {
+                    image: '${request.contextPath}/statics/sys/images/slider/slide-5.jpg', title: 'Image 5', thumb : '${request.contextPath}/statics/sys/images/slider/thumb-5.jpg'
+                }
+            ]
+
+        });
+    });
+</script>
+<script src="${request.contextPath}/statics/sys/js/bootstrap.min.js"></script>
+<script src="${request.contextPath}/statics/sys/js/templatemo_script.js"></script>
+</body>
+</html>

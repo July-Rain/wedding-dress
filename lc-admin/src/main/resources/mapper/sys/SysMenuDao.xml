@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="lc.platform.admin.modules.sys.dao.SysMenuDao">
+
+    <select id="queryListParentId" resultType="lc.platform.admin.modules.sys.entity.SysMenuEntity">
+		select * from sys_menu where parent_id = #{parentId} order by order_num asc 
+	</select>
+
+    <select id="queryNotButtonList" resultType="lc.platform.admin.modules.sys.entity.SysMenuEntity">
+		select * from sys_menu where type != 2 order by order_num asc 
+	</select>
+
+    <select id="queryForZtree" resultType="java.util.Map">
+		select s1.menu_id menuId,s1.parent_id parentId,s1.name name ,
+				s1.url url,s1.perms perms,s1.type type,
+				s1.icon icon,s1.order_num orderNum,
+				s1.is_show isShow ,s2.`name` parentName from sys_menu s1
+			left join sys_menu s2
+			on s1.parent_id = s2.menu_id
+			where s1.parent_id is not NULL
+	</select>
+
+</mapper>
