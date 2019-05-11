@@ -12,7 +12,7 @@ import org.apache.commons.httpclient.methods.StringRequestEntity;
 import org.apache.commons.io.IOUtils;
 
 /**
- * @author MengyuWu
+ * @author ZhanXue
  * @Title:
  * @Package
  * @Description: httpclient接口

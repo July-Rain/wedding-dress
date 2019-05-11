@@ -169,7 +169,7 @@ public class SysDictController extends AbstractController {
      * 　　* @param
      * 　　* @return
      * 　　* @throws
-     * 　　* @author MengyuWu
+     * 　　* @author ZhanXue
      * 　　* @date 2018/3/20 19:30
      */
     @RequestMapping("/getcreator")
@@ -193,7 +193,7 @@ public class SysDictController extends AbstractController {
      * 　　* @param type
      * 　　* @return Result
      * 　　* @throws
-     * 　　* @author MengyuWu
+     * 　　* @author ZhanXue
      * 　　* @date 2018/3/14 19:48
      */
 

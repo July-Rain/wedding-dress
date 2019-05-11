@@ -170,7 +170,7 @@ public class DictController extends AbstractController {
      * 　　* @param
      * 　　* @return
      * 　　* @throws
-     * 　　* @author MengyuWu
+     * 　　* @author ZhanXue
      * 　　* @date 2018/3/20 19:30
      */
     @RequestMapping("/getcreator")

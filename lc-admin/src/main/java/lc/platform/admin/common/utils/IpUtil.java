@@ -3,7 +3,7 @@ package lc.platform.admin.common.utils;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @author MengyuWu
+ * @author ZhanXue
  * @Title: ${file_name}
  * @Package ${package_name}
  * @Description: 获取IP

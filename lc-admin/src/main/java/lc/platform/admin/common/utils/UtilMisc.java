@@ -306,7 +306,7 @@ public class UtilMisc extends AbstractController {
      * 　　* @param
      * 　　* @return
      * 　　* @throws
-     * 　　* @author MengyuWu
+     * 　　* @author ZhanXue
      * 　　* @date 2018/3/26 20:32
      */
     public static String getTimestamp() {
@@ -398,7 +398,7 @@ public class UtilMisc extends AbstractController {
      * 　　* @param
      * 　　* @return
      * 　　* @throws
-     * 　　* @author MengyuWu
+     * 　　* @author ZhanXue
      * 　　* @date 2018/4/13 16:26
      */
 //    public Result uploadPdfToPic(MultipartHttpServletRequest request) throws IOException {
@@ -513,7 +513,7 @@ public class UtilMisc extends AbstractController {
      * 　　* @param
      * 　　* @return
      * 　　* @throws
-     * 　　* @author MengyuWu
+     * 　　* @author ZhanXue
      * 　　* @date 2018/4/13 16:32
      */
     public File getFileFromBytes(byte[] b) {
