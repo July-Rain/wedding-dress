@@ -4,6 +4,29 @@
 
     <#include "/header.html">
     <link href="${request.contextPath}/statics/sys/css/templatemo_style.css" rel="stylesheet" type="text/css">
+    <link href="${request.contextPath}/statics/sys/css/swiper.css" rel="stylesheet">
+    <style type="text/css">
+        img{
+            width: 100%;
+        }
+
+        #gallery {
+            width: 1200px;
+        }
+
+        #thumbs {
+            width: 1000px;
+            margin-top: 50px;
+        }
+
+        #thumbs .swiper-slide {
+            opacity: 0.3;
+        }
+
+        #thumbs .swiper-slide-thumb-active{
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
 <div class="main-container" id="rrapp" >
@@ -82,88 +105,221 @@
     </section>
     <section class="page services" id="page2">
         <h1>服务介绍</h1>
-        <div class="page-container">
-            <div class="templatemo-item">
-                <!-- To change icons, see http://fortawesome.github.io/Font-Awesome/icons/ -->
-                <i class="fa fa-cog rounded"></i>
-                <h3>专业的团队</h3>
-                <p>我们是一群热爱传统文化，热爱生活，又热爱摄影的年轻人。我们专注于记录美的瞬间，履行着文化传承的使命。</p>
+        <div class="swiper-container" id="gallery">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="${request.contextPath}/statics/sys/images/team/team-1.png" >
+                    <span>我们是一群热爱传统文化，热爱生活，又热爱摄影的年轻人。我们专注于记录美的瞬间，履行着文化传承的使命</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="${request.contextPath}/statics/sys/images/team/team-2.png" >
+                    <span>构图完整、构图干净、角度到位、角度独特、用光巧妙、作品细腻。</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="${request.contextPath}/statics/sys/images/team/team-3.png" >
+                    <span>不同的拍摄场景满足您对爱情的一切美好的愿望，在每个充满幸福的地方记录专属你们的幸福时刻。</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="${request.contextPath}/statics/sys/images/team/team-4.png" >
+                    <span>每一笔消费都给您透明的账单，让您在一开始选择的时候久确定好全部的费用，全程透明化消费。</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="${request.contextPath}/statics/sys/images/team/team-5.png" >
+                    <span>拥有中式欧式等知名建筑体系，所有的一切经过艺术家的精心设计，形成一幅幅立体的画面。</span>
+                </div>
             </div>
-            <div class="templatemo-item">
-                <i class="fa fa-html5 rounded"></i>
-                <h3>精湛的拍摄技术</h3>
-                <p> 构图完整、构图干净、角度到位、角度独特、用光巧妙、作品细腻。</p>
-            </div>
-            <div class="templatemo-item">
-                <i class="fa fa-star rounded"></i>
-                <h3>多样拍摄基地</h3>
-                <p>不同的拍摄场景满足您对爱情的一切美好的愿望，在每个充满幸福的地方记录专属你们的幸福时刻。</p>
-            </div>
-            <div class="templatemo-item">
-                <i class="fa fa-cubes rounded"></i>
-                <h3>透明化消费</h3>
-                <p>每一笔消费都给您透明的账单，让您在一开始选择的时候久确定好全部的费用，全程透明化消费。</p>
-            </div>
-            <div class="templatemo-item">
-                <i class="fa fa-database rounded"></i>
-                <h3>最受欢迎摄影工作室</h3>
-                <p>拥有中式欧式等知名建筑体系，所有的一切经过艺术家的精心设计，形成一幅幅立体的画面。</p>
-            </div>
-            <div class="templatemo-item">
-                <i class="fa fa-mobile rounded"></i>
-                <h3>全国连锁</h3>
-                <p>全国各地多家连锁婚纱摄影拍摄，满足您随时随地的摄影需求，记录您每时每刻的幸福时光。</p>
-            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
         </div>
+
+        <div class="swiper-container swiper-container-thumbs" id="thumbs">
+            <div class="swiper-wrapper" style="transition-duration: 0ms;">
+                <div class="swiper-slide">
+                    <img src="${request.contextPath}/statics/sys/images/team/team-1.png" title="专业的团队">
+                </div>
+                <div class="swiper-slide">
+                    <img src="${request.contextPath}/statics/sys/images/team/team-2.png" title="精湛的拍摄技术">
+                </div>
+                <div class="swiper-slide">
+                    <img src="${request.contextPath}/statics/sys/images/team/team-3.png" title="多样拍摄基地">
+                </div>
+                <div class="swiper-slide">
+                    <img src="${request.contextPath}/statics/sys/images/team/team-4.png" title="透明化消费">
+                </div>
+                <div class="swiper-slide">
+                    <img src="${request.contextPath}/statics/sys/images/team/team-5.png" title="最受欢迎摄影工作室">
+                </div>
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+        <!--<div class="page-container">-->
+            <!--<div class="templatemo-item">-->
+                <!--&lt;!&ndash; To change icons, see http://fortawesome.github.io/Font-Awesome/icons/ &ndash;&gt;-->
+                <!--<i class="fa fa-cog rounded"></i>-->
+                <!--<h3>专业的团队</h3>-->
+                <!--<p>我们是一群热爱传统文化，热爱生活，又热爱摄影的年轻人。我们专注于记录美的瞬间，履行着文化传承的使命。</p>-->
+            <!--</div>-->
+            <!--<div class="templatemo-item">-->
+                <!--<i class="fa fa-html5 rounded"></i>-->
+                <!--<h3>精湛的拍摄技术</h3>-->
+                <!--<p> 构图完整、构图干净、角度到位、角度独特、用光巧妙、作品细腻。</p>-->
+            <!--</div>-->
+            <!--<div class="templatemo-item">-->
+                <!--<i class="fa fa-star rounded"></i>-->
+                <!--<h3>多样拍摄基地</h3>-->
+                <!--<p>不同的拍摄场景满足您对爱情的一切美好的愿望，在每个充满幸福的地方记录专属你们的幸福时刻。</p>-->
+            <!--</div>-->
+            <!--<div class="templatemo-item">-->
+                <!--<i class="fa fa-cubes rounded"></i>-->
+                <!--<h3>透明化消费</h3>-->
+                <!--<p>每一笔消费都给您透明的账单，让您在一开始选择的时候久确定好全部的费用，全程透明化消费。</p>-->
+            <!--</div>-->
+            <!--<div class="templatemo-item">-->
+                <!--<i class="fa fa-database rounded"></i>-->
+                <!--<h3>最受欢迎摄影工作室</h3>-->
+                <!--<p>拥有中式欧式等知名建筑体系，所有的一切经过艺术家的精心设计，形成一幅幅立体的画面。</p>-->
+            <!--</div>-->
+            <!--<div class="templatemo-item">-->
+                <!--<i class="fa fa-mobile rounded"></i>-->
+                <!--<h3>全国连锁</h3>-->
+                <!--<p>全国各地多家连锁婚纱摄影拍摄，满足您随时随地的摄影需求，记录您每时每刻的幸福时光。</p>-->
+            <!--</div>-->
+        <!--</div>-->
     </section>
     <section class="page team" id="page3">
         <h1>风格展示</h1>
-        <div class="page-container">
-            <div class="templatemo-item">
-                <img src="${request.contextPath}/statics/sys/images/team/pic1.jpg" alt="Team member 1" class="bordered">
-                <h3>厦门拍摄</h3>
-                <p>厦门这个城市，又名“鹭岛”，城在海上，海在城中。这里有摇摇欲坠的破旧楼舍、红色铺砖的街道；这里还有美丽宁静的岛屿，岛上时常飘出悠扬的钢琴声；这里更有那蓝天白云，大海一望无际，鹭鸟在海上打闹嬉戏……这里有着你心中城市最美的样子</p>
-                <div class="social">
-                </div>
-            </div>
-            <div class="templatemo-item">
-                <img src="${request.contextPath}/statics/sys/images/team/pic2.jpg" alt="Team member 2" class="bordered">
-                <h3>三亚拍摄</h3>
-                <p>三亚在海南岛最南端，被人们称为"东方夏威夷"和"天下第一湾"。她宛如一颗美丽的浮珠镶嵌在南海碧波之中，是中国最南部的热带滨海旅游城市,中国海滨城市,是中国空气质量最好的城市、全国最长寿地区。</p>
-                <div class="social">
-                </div>
-            </div>
-            <div class="templatemo-item">
-                <img src="${request.contextPath}/statics/sys/images/team/pic3.jpg" alt="Team member 3" class="bordered">
-                <h3>婺源拍摄</h3>
-                <p>婺源县，今属江西省上饶市下辖县，是古徽州一府六县之一。位于江西东北部，与皖、浙两省交界，土地面积2967平方公里，其中有林地378万亩，耕地32万亩，素有“八分半山一分田，半分水路和庄园”之称。</p>
-                <div class="social">
-                </div>
-            </div>
-            <div class="templatemo-item">
-                <img src="${request.contextPath}/statics/sys/images/team/pic4.jpg" alt="Team member 2" class="bordered">
-                <h3>湘潭拍摄</h3>
-                <p>湘潭从南朝开始建县，距今已有1500多年，是湖湘文化的重要发祥地、中国红色文化的摇篮，有“小南京”、“金湘潭”的美誉。“湘中灵秀千秋水，天下英雄一郡多”</p>
-                <div class="social">
-                </div>
-            </div>
-            <div class="templatemo-item">
-                <img src="${request.contextPath}/statics/sys/images/team/pic5.jpg" alt="Team member 3" class="bordered">
-                <h3>吉安拍摄</h3>
-                <p>吉安，古称庐陵、吉州，元初取“吉泰民安”之意改称吉安，江西省地级市，长江中游城市群重要成员，位于江西省中部，赣江中游，西接湖南省，南揽罗霄山脉中段，据富饶的吉泰平原，是江西建制最早的古郡之一，是赣文化发源地之一。</p>
+        <ul class="lb-album">
+            <li>
+                <a href="#image-1">
+                    <img src="${request.contextPath}/statics/sys/images/team/pic1.jpg" alt="image01">
+                    <span>厦门拍摄</span>
+                </a>
+                <div class="lb-overlay" id="image-1">
+                    <a href="#page" class="lb-close">x Close</a>
+                    <img src="${request.contextPath}/statics/sys/images/team/pic1.jpg" alt="image01" />
+                    <div>
+                        <h3>厦门拍摄</h3>
+                        <p>厦门这个城市，又名“鹭岛”，城在海上，海在城中。这里有摇摇欲坠的破旧楼舍、红色铺砖的街道；这里还有美丽宁静的岛屿，岛上时常飘出悠扬的钢琴声；这里更有那蓝天白云，大海一望无际，鹭鸟在海上打闹嬉戏……这里有着你心中城市最美的样子</p>
+                    </div>
 
-                <div class="social">
                 </div>
-            </div>
-            <div class="templatemo-item">
-                <img src="${request.contextPath}/statics/sys/images/team/pic6.jpg" alt="Team member 1" class="bordered">
-                <h3>仙女湖拍摄</h3>
-                <p>仙女湖四季分明，气候十分宜人，全年平均气温17℃，日照1677.4小时，降雨量1532毫米，无霜期265天，相对温度70%，具有丰富的自然、人文景观资源和历史文化内涵。</p>
+            </li>
+            <li>
+                <a href="#image-2">
+                    <img src="${request.contextPath}/statics/sys/images/team/pic2.jpg" alt="image02">
+                    <span>三亚拍摄</span>
+                </a>
+                <div class="lb-overlay" id="image-2">
+                    <img src="${request.contextPath}/statics/sys/images/team/pic2.jpg" alt="image02" />
+                    <div>
+                        <h3>三亚拍摄</h3>
+                        <p>三亚在海南岛最南端，被人们称为"东方夏威夷"和"天下第一湾"。她宛如一颗美丽的浮珠镶嵌在南海碧波之中，是中国最南部的热带滨海旅游城市,中国海滨城市,是中国空气质量最好的城市、全国最长寿地区。</p>
+                    </div>
+                    <a href="#page" class="lb-close">x Close</a>
+                </div>
+            </li>
+            <li>
+                <a href="#image-3">
+                    <img src="${request.contextPath}/statics/sys/images/team/pic3.jpg" alt="image03">
+                    <span>婺源拍摄</span>
+                </a>
+                <div class="lb-overlay" id="image-3">
+                    <img src="${request.contextPath}/statics/sys/images/team/pic3.jpg" alt="image03" />
+                    <div>
+                        <h3>婺源拍摄</h3>
+                        <p>婺源县，今属江西省上饶市下辖县，是古徽州一府六县之一。位于江西东北部，与皖、浙两省交界，土地面积2967平方公里，其中有林地378万亩，耕地32万亩，素有“八分半山一分田，半分水路和庄园”之称。</p>
+                    </div>
+                    <a href="#page" class="lb-close">x Close</a>
+                </div>
+            </li>
+            <li>
+                <a href="#image-4">
+                    <img src="${request.contextPath}/statics/sys/images/team/pic4.jpg" alt="image04">
+                    <span>湘潭拍摄</span>
+                </a>
+                <div class="lb-overlay" id="image-4">
+                    <img src="${request.contextPath}/statics/sys/images/team/pic4.jpg" alt="image04" />
+                    <div>
+                        <h3>湘潭拍摄</h3>
+                        <p>湘潭从南朝开始建县，距今已有1500多年，是湖湘文化的重要发祥地、中国红色文化的摇篮，有“小南京”、“金湘潭”的美誉。“湘中灵秀千秋水，天下英雄一郡多”</p>
+                    </div>
+                    <a href="#page" class="lb-close">x Close</a>
+                </div>
+            </li>
+            <li>
+                <a href="#image-5">
+                    <img src="${request.contextPath}/statics/sys/images/team/pic5.jpg" alt="image05">
+                    <span>吉安拍摄</span>
+                </a>
+                <div class="lb-overlay" id="image-5">
+                    <img src="${request.contextPath}/statics/sys/images/team/pic5.jpg" alt="image05" />
+                    <div>
+                        <h3>吉安拍摄</h3>
+                        <p>吉安，古称庐陵、吉州，元初取“吉泰民安”之意改称吉安，江西省地级市，长江中游城市群重要成员，位于江西省中部，赣江中游，西接湖南省，南揽罗霄山脉中段，据富饶的吉泰平原，是江西建制最早的古郡之一，是赣文化发源地之一。</p>
+                    </div>
+                    <a href="#page" class="lb-close">x Close</a>
+                </div>
+            </li>
+            <li>
+                <a href="#image-6">
+                    <img src="${request.contextPath}/statics/sys/images/team/pic6.jpg" alt="image06">
+                    <span>仙女湖拍摄</span>
+                </a>
+                <div class="lb-overlay" id="image-6">
+                    <img src="${request.contextPath}/statics/sys/images/team/pic6.jpg" alt="image06" />
+                    <div>
+                        <h3>仙女湖拍摄</h3>
+                        <p>仙女湖四季分明，气候十分宜人，全年平均气温17℃，日照1677.4小时，降雨量1532毫米，无霜期265天，相对温度70%，具有丰富的自然、人文景观资源和历史文化内涵。</p>
+                    </div>
+                    <a href="#page" class="lb-close">x Close</a>
+                </div>
+            </li>
+        </ul>
+        <!--<div class="page-container">-->
+            <!--<div class="templatemo-item">-->
+                <!--<img src="${request.contextPath}/statics/sys/images/team/pic1.jpg" alt="Team member 1" class="bordered">-->
+                <!--<h3>厦门拍摄</h3>-->
+                <!--<p>厦门这个城市，又名“鹭岛”，城在海上，海在城中。这里有摇摇欲坠的破旧楼舍、红色铺砖的街道；这里还有美丽宁静的岛屿，岛上时常飘出悠扬的钢琴声；这里更有那蓝天白云，大海一望无际，鹭鸟在海上打闹嬉戏……这里有着你心中城市最美的样子</p>-->
+                <!--<div class="social">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="templatemo-item">-->
+                <!--<img src="${request.contextPath}/statics/sys/images/team/pic2.jpg" alt="Team member 2" class="bordered">-->
+                <!--<h3>三亚拍摄</h3>-->
+                <!--<p>三亚在海南岛最南端，被人们称为"东方夏威夷"和"天下第一湾"。她宛如一颗美丽的浮珠镶嵌在南海碧波之中，是中国最南部的热带滨海旅游城市,中国海滨城市,是中国空气质量最好的城市、全国最长寿地区。</p>-->
+                <!--<div class="social">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="templatemo-item">-->
+                <!--<img src="${request.contextPath}/statics/sys/images/team/pic3.jpg" alt="Team member 3" class="bordered">-->
+                <!--<h3>婺源拍摄</h3>-->
+                <!--<p>婺源县，今属江西省上饶市下辖县，是古徽州一府六县之一。位于江西东北部，与皖、浙两省交界，土地面积2967平方公里，其中有林地378万亩，耕地32万亩，素有“八分半山一分田，半分水路和庄园”之称。</p>-->
+                <!--<div class="social">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="templatemo-item">-->
+                <!--<img src="${request.contextPath}/statics/sys/images/team/pic4.jpg" alt="Team member 2" class="bordered">-->
+                <!--<h3>湘潭拍摄</h3>-->
+                <!--<p>湘潭从南朝开始建县，距今已有1500多年，是湖湘文化的重要发祥地、中国红色文化的摇篮，有“小南京”、“金湘潭”的美誉。“湘中灵秀千秋水，天下英雄一郡多”</p>-->
+                <!--<div class="social">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="templatemo-item">-->
+                <!--<img src="${request.contextPath}/statics/sys/images/team/pic5.jpg" alt="Team member 3" class="bordered">-->
+                <!--<h3>吉安拍摄</h3>-->
+                <!--<p>吉安，古称庐陵、吉州，元初取“吉泰民安”之意改称吉安，江西省地级市，长江中游城市群重要成员，位于江西省中部，赣江中游，西接湖南省，南揽罗霄山脉中段，据富饶的吉泰平原，是江西建制最早的古郡之一，是赣文化发源地之一。</p>-->
 
-                <div class="social">
-                </div>
-            </div>
-        </div>
+                <!--<div class="social">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="templatemo-item">-->
+                <!--<img src="${request.contextPath}/statics/sys/images/team/pic6.jpg" alt="Team member 1" class="bordered">-->
+                <!--<h3>仙女湖拍摄</h3>-->
+                <!--<p>仙女湖四季分明，气候十分宜人，全年平均气温17℃，日照1677.4小时，降雨量1532毫米，无霜期265天，相对温度70%，具有丰富的自然、人文景观资源和历史文化内涵。</p>-->
+
+                <!--<div class="social">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
     </section>
     <section class="page" id="page4">
         <div class="page-container">
@@ -271,6 +427,10 @@
 <script src="${request.contextPath}/statics/sys/js/jquery.easing-1.3.js"></script>
 <script src="${request.contextPath}/statics/sys/js/plugins.js"></script>
 <script src="${request.contextPath}/statics/js/modules/sys/sysindex.js"></script>
+<script type="text/javascript" src="${request.contextPath}/statics/js/slider.js"></script>
+<script type="text/javascript">
+    jQuery("#wowslider-container1").wowSlider({effect:"cube",prev:"",next:"",duration:20*100,delay:20*100,width:716,height:297,autoPlay:true,playPause:true,stopOnHover:false,loop:false,bullets:0,caption:true,captionEffect:"slide",controls:true,onBeforeStep:0,images:0});
+</script>
 <script type="text/javascript">
     /* www.buildinternet.com/project/supersized
     ------------------------------------------- */
@@ -300,6 +460,26 @@
 
         });
     });
+</script>
+<script type="text/javascript" src="${request.contextPath}/statics/sys/js/swiper.min.js"></script>
+<script type="text/javascript">
+    var thumbsSwiper = new Swiper('#thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 5,
+        watchSlidesVisibility: true, //防止不可点击
+    })
+    var gallerySwiper = new Swiper('#gallery', {
+        effect : 'coverflow',
+        spaceBetween: 10, //缩略图间距
+        slidesPerView: 3,
+        centeredSlides: true,
+        initialSlide :2,
+        loop: true,
+        autoplay: true,
+        thumbs: {
+            swiper: thumbsSwiper,
+        }
+    })
 </script>
 <script src="${request.contextPath}/statics/sys/js/bootstrap.min.js"></script>
 <script src="${request.contextPath}/statics/sys/js/templatemo_script.js"></script>
