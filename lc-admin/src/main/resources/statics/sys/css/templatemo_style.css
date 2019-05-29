@@ -130,7 +130,7 @@ p {
   font-size: 14px; 
   font-weight: 300; 
   line-height: 1.8;
-  text-align: justify;
+  text-align: center;
   margin-bottom: 10px;
 }
 a { color: white; }
@@ -186,7 +186,7 @@ a:hover { color: white; }
 #page2 { z-index: 4; background: #3E88A3; }
 #page3 { z-index: 3; background: #B23573;	}
 #page4 { z-index: 2; background: #818089; }
-#page5 { z-index: 1; background: #50AF98; }
+#page5 { z-index: 1;  background-image: url(../images/lxwm.jpg); background-repeat: no-repeat;background-position: center; }
 #page6 { z-index: 1; background: #73af71; }
 
 /* 5. Image styles
@@ -467,11 +467,13 @@ input#subject {	width: 100%; }
     风格展示
  */
 .lb-album{
+  float: left;
   width: 900px;
   margin: 0 auto;
   font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
 }
 .lb-album li{
+  width:30%;
   float: left;
   margin: 5px;
   position: relative;
@@ -481,8 +483,8 @@ input#subject {	width: 100%; }
   display: block;
 }
 .lb-album li > a{
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
   position: relative;
   padding: 10px;
   background: #f1d2c2;
@@ -495,8 +497,8 @@ input#subject {	width: 100%; }
 }
 .lb-album li > a span{
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 95%;
+  height: 95%;
   top: 10px;
   left: 10px;
   text-align: center;
@@ -549,7 +551,7 @@ input#subject {	width: 100%; }
   opacity: 0;
   filter: alpha(opacity=0); /* internet explorer */
   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
-  width: 550px;
+  width: 600px;
   margin: 10px auto 0px auto;
   text-shadow: 0px 1px 1px rgba(255,255,255,0.6);
   -webkit-transition: opacity 0.3s linear 1.3s;
@@ -574,7 +576,7 @@ input#subject {	width: 100%; }
 .lb-overlay div p{
   font-size: 16px;
   font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 .lb-overlay div h3 span{
   display: block;
@@ -583,14 +585,14 @@ input#subject {	width: 100%; }
 .lb-overlay div p{
   text-align: left;
   float: left;
-  width: 260px;
+  width: 400px;
 }
 .lb-overlay a.lb-close{
   background: rgba(27,54,81,0.8);
   z-index: 1001;
   color: #fff;
   position: absolute;
-  /*top: 43px;*/
+  top: 100px;
   left: 50%;
   font-size: 15px;
   line-height: 26px;
@@ -666,4 +668,7 @@ input#subject {	width: 100%; }
 */
 x:-o-prefocus, .lb-overlay img {
   height: 100%;
+}
+.big-image{
+  width: 500px;
 }

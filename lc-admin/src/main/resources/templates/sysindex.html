@@ -46,11 +46,18 @@
     </div>
     <div class="templatemo-header">
         <div id="logo" class="pull-left">婚纱摄影网站</div>
+
         <nav class="hidden-sm hidden-xs pull-right">
             <ul>
                 <li id="page1_link" class="active">首页</li>
                 <li id="page2_link">服务介绍</li>
-                <li id="page3_link">风格展示</li>
+                <li id="page3_link">风格展示
+                    <ul style="display: none">
+                        <li><a href='#'>企业管理</a></li>
+                        <li><a href='#'>商业模式咨询</a></li>
+                        <li><a href='#'>科技咨询</a></li>
+                    </ul>
+                </li>
                 <li id="page4_link">关于我们</li>
                 <li id="page5_link">联系我们</li>
                 <li id="page6_link">拍摄预定</li>
@@ -187,93 +194,98 @@
     </section>
     <section class="page team" id="page3">
         <h1>风格展示</h1>
-        <ul class="lb-album">
-            <li>
-                <a href="#image-1">
-                    <img src="${request.contextPath}/statics/sys/images/team/pic1.jpg" alt="image01">
-                    <span>厦门拍摄</span>
-                </a>
-                <div class="lb-overlay" id="image-1">
-                    <a href="#page" class="lb-close">x Close</a>
-                    <img src="${request.contextPath}/statics/sys/images/team/pic1.jpg" alt="image01" />
-                    <div>
-                        <h3>厦门拍摄</h3>
-                        <p>厦门这个城市，又名“鹭岛”，城在海上，海在城中。这里有摇摇欲坠的破旧楼舍、红色铺砖的街道；这里还有美丽宁静的岛屿，岛上时常飘出悠扬的钢琴声；这里更有那蓝天白云，大海一望无际，鹭鸟在海上打闹嬉戏……这里有着你心中城市最美的样子</p>
-                    </div>
+        <div style="text-align:center;margin-left: 245px;">
+            <ul class="lb-album">
+                <li>
+                    <a href="#image-1">
+                        <img src="${request.contextPath}/statics/sys/images/team/pic1.jpg" alt="image01">
+                        <span>厦门拍摄</span>
+                    </a>
+                    <div class="lb-overlay" id="image-1">
+                        <a href="#page" class="lb-close">x Close</a>
+                        <img class="big-image" src="${request.contextPath}/statics/sys/images/team/pic1.jpg" alt="image01" />
+                        <div>
+                            <h3>厦门拍摄</h3>
+                            <p>厦门这个城市，又名“鹭岛”，城在海上，海在城中。这里有摇摇欲坠的破旧楼舍、红色铺砖的街道；这里还有美丽宁静的岛屿，岛上时常飘出悠扬的钢琴声；这里更有那蓝天白云，大海一望无际，鹭鸟在海上打闹嬉戏……这里有着你心中城市最美的样子</p>
+                        </div>
 
-                </div>
-            </li>
-            <li>
-                <a href="#image-2">
-                    <img src="${request.contextPath}/statics/sys/images/team/pic2.jpg" alt="image02">
-                    <span>三亚拍摄</span>
-                </a>
-                <div class="lb-overlay" id="image-2">
-                    <img src="${request.contextPath}/statics/sys/images/team/pic2.jpg" alt="image02" />
-                    <div>
-                        <h3>三亚拍摄</h3>
-                        <p>三亚在海南岛最南端，被人们称为"东方夏威夷"和"天下第一湾"。她宛如一颗美丽的浮珠镶嵌在南海碧波之中，是中国最南部的热带滨海旅游城市,中国海滨城市,是中国空气质量最好的城市、全国最长寿地区。</p>
                     </div>
-                    <a href="#page" class="lb-close">x Close</a>
-                </div>
-            </li>
-            <li>
-                <a href="#image-3">
-                    <img src="${request.contextPath}/statics/sys/images/team/pic3.jpg" alt="image03">
-                    <span>婺源拍摄</span>
-                </a>
-                <div class="lb-overlay" id="image-3">
-                    <img src="${request.contextPath}/statics/sys/images/team/pic3.jpg" alt="image03" />
-                    <div>
-                        <h3>婺源拍摄</h3>
-                        <p>婺源县，今属江西省上饶市下辖县，是古徽州一府六县之一。位于江西东北部，与皖、浙两省交界，土地面积2967平方公里，其中有林地378万亩，耕地32万亩，素有“八分半山一分田，半分水路和庄园”之称。</p>
+                </li>
+                <li>
+                    <a href="#image-2">
+                        <img src="${request.contextPath}/statics/sys/images/team/pic2.jpg" alt="image02">
+                        <span>三亚拍摄</span>
+                    </a>
+                    <div class="lb-overlay" id="image-2">
+                        <img class="big-image" src="${request.contextPath}/statics/sys/images/team/pic2.jpg" alt="image02" />
+                        <div>
+                            <h3>三亚拍摄</h3>
+                            <p>三亚在海南岛最南端，被人们称为"东方夏威夷"和"天下第一湾"。她宛如一颗美丽的浮珠镶嵌在南海碧波之中，是中国最南部的热带滨海旅游城市,中国海滨城市,是中国空气质量最好的城市、全国最长寿地区。</p>
+                        </div>
+                        <a href="#page" class="lb-close">x Close</a>
                     </div>
-                    <a href="#page" class="lb-close">x Close</a>
-                </div>
-            </li>
-            <li>
-                <a href="#image-4">
-                    <img src="${request.contextPath}/statics/sys/images/team/pic4.jpg" alt="image04">
-                    <span>湘潭拍摄</span>
-                </a>
-                <div class="lb-overlay" id="image-4">
-                    <img src="${request.contextPath}/statics/sys/images/team/pic4.jpg" alt="image04" />
-                    <div>
-                        <h3>湘潭拍摄</h3>
-                        <p>湘潭从南朝开始建县，距今已有1500多年，是湖湘文化的重要发祥地、中国红色文化的摇篮，有“小南京”、“金湘潭”的美誉。“湘中灵秀千秋水，天下英雄一郡多”</p>
+                </li>
+                <li>
+                    <a href="#image-3">
+                        <img src="${request.contextPath}/statics/sys/images/team/pic3.jpg" alt="image03">
+                        <span>婺源拍摄</span>
+                    </a>
+                    <div class="lb-overlay" id="image-3">
+                        <img  class="big-image" src="${request.contextPath}/statics/sys/images/team/pic3.jpg" alt="image03" />
+                        <div>
+                            <h3>婺源拍摄</h3>
+                            <p>婺源县，今属江西省上饶市下辖县，是古徽州一府六县之一。位于江西东北部，与皖、浙两省交界，土地面积2967平方公里，其中有林地378万亩，耕地32万亩，素有“八分半山一分田，半分水路和庄园”之称。</p>
+                        </div>
+                        <a href="#page" class="lb-close">x Close</a>
                     </div>
-                    <a href="#page" class="lb-close">x Close</a>
-                </div>
-            </li>
-            <li>
-                <a href="#image-5">
-                    <img src="${request.contextPath}/statics/sys/images/team/pic5.jpg" alt="image05">
-                    <span>吉安拍摄</span>
-                </a>
-                <div class="lb-overlay" id="image-5">
-                    <img src="${request.contextPath}/statics/sys/images/team/pic5.jpg" alt="image05" />
-                    <div>
-                        <h3>吉安拍摄</h3>
-                        <p>吉安，古称庐陵、吉州，元初取“吉泰民安”之意改称吉安，江西省地级市，长江中游城市群重要成员，位于江西省中部，赣江中游，西接湖南省，南揽罗霄山脉中段，据富饶的吉泰平原，是江西建制最早的古郡之一，是赣文化发源地之一。</p>
+                </li>
+            </ul>
+            <ul class="lb-album">
+                <li>
+                    <a href="#image-4">
+                        <img src="${request.contextPath}/statics/sys/images/team/pic4.jpg" alt="image04">
+                        <span>湘潭拍摄</span>
+                    </a>
+                    <div class="lb-overlay" id="image-4">
+                        <img class="big-image" src="${request.contextPath}/statics/sys/images/team/pic4.jpg" alt="image04" />
+                        <div>
+                            <h3>湘潭拍摄</h3>
+                            <p>湘潭从南朝开始建县，距今已有1500多年，是湖湘文化的重要发祥地、中国红色文化的摇篮，有“小南京”、“金湘潭”的美誉。“湘中灵秀千秋水，天下英雄一郡多”</p>
+                        </div>
+                        <a href="#page" class="lb-close">x Close</a>
                     </div>
-                    <a href="#page" class="lb-close">x Close</a>
-                </div>
-            </li>
-            <li>
-                <a href="#image-6">
-                    <img src="${request.contextPath}/statics/sys/images/team/pic6.jpg" alt="image06">
-                    <span>仙女湖拍摄</span>
-                </a>
-                <div class="lb-overlay" id="image-6">
-                    <img src="${request.contextPath}/statics/sys/images/team/pic6.jpg" alt="image06" />
-                    <div>
-                        <h3>仙女湖拍摄</h3>
-                        <p>仙女湖四季分明，气候十分宜人，全年平均气温17℃，日照1677.4小时，降雨量1532毫米，无霜期265天，相对温度70%，具有丰富的自然、人文景观资源和历史文化内涵。</p>
+                </li>
+                <li>
+                    <a href="#image-5">
+                        <img src="${request.contextPath}/statics/sys/images/team/pic5.jpg" alt="image05">
+                        <span>吉安拍摄</span>
+                    </a>
+                    <div class="lb-overlay" id="image-5">
+                        <img class="big-image" src="${request.contextPath}/statics/sys/images/team/pic5.jpg" alt="image05" />
+                        <div>
+                            <h3>吉安拍摄</h3>
+                            <p>吉安，古称庐陵、吉州，元初取“吉泰民安”之意改称吉安，江西省地级市，长江中游城市群重要成员，位于江西省中部，赣江中游，西接湖南省，南揽罗霄山脉中段，据富饶的吉泰平原，是江西建制最早的古郡之一，是赣文化发源地之一。</p>
+                        </div>
+                        <a href="#page" class="lb-close">x Close</a>
                     </div>
-                    <a href="#page" class="lb-close">x Close</a>
-                </div>
-            </li>
-        </ul>
+                </li>
+                <li>
+                    <a href="#image-6">
+                        <img src="${request.contextPath}/statics/sys/images/team/pic6.jpg" alt="image06">
+                        <span>仙女湖拍摄</span>
+                    </a>
+                    <div class="lb-overlay" id="image-6">
+                        <img class="big-image" src="${request.contextPath}/statics/sys/images/team/pic6.jpg" alt="image06" />
+                        <div>
+                            <h3>仙女湖拍摄</h3>
+                            <p>仙女湖四季分明，气候十分宜人，全年平均气温17℃，日照1677.4小时，降雨量1532毫米，无霜期265天，相对温度70%，具有丰富的自然、人文景观资源和历史文化内涵。</p>
+                        </div>
+                        <a href="#page" class="lb-close">x Close</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
         <!--<div class="page-container">-->
             <!--<div class="templatemo-item">-->
                 <!--<img src="${request.contextPath}/statics/sys/images/team/pic1.jpg" alt="Team member 1" class="bordered">-->
@@ -334,13 +346,9 @@
     <section class="page contact" id="page5">
         <div class="page-container" >
             <div class="page-content padding" align="center">
-                <h1>关于我们</h1>
-                <p>联系人：张三</p>
-                <p>联系电话：15911111111</p>
-                <p>联系QQ：15911111111</p>
-                <p>联系微信：15911111111</p>
-                <p>官方微博：婚纱摄影</p>
-                <img src="${request.contextPath}/statics/sys/images/about/about.jpg" alt="about" class="bordered">
+                <h1>联系我们</h1>
+                <p>联系人：张三 &nbsp;&nbsp;&nbsp;&nbsp;联系电话：15911111111</p>
+                <p>联系QQ：15911111111&nbsp;&nbsp;&nbsp;&nbsp;  联系微信：15911111111 &nbsp;&nbsp;&nbsp;&nbsp; 官方微博：婚纱摄影</p>
             </div>
         </div>
     </section>
