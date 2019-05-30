@@ -57,6 +57,12 @@ public class ShiroConfig {
         filterMap.put("/webjars/**", "anon");
         filterMap.put("/statics/**", "anon");
         filterMap.put("/sysindex.html", "anon");
+        filterMap.put("/modules/sys/styleindex-1.html", "anon");
+        filterMap.put("/modules/sys/styleindex-2.html", "anon");
+        filterMap.put("/modules/sys/styleindex-3.html", "anon");
+        filterMap.put("/modules/sys/styleindex-4.html", "anon");
+        filterMap.put("/modules/sys/styleindex-5.html", "anon");
+        filterMap.put("/modules/sys/styleindex-6.html", "anon");
         filterMap.put("/" + loginpage, "anon");
         filterMap.put("/sys/login", "anon");
         filterMap.put("/mgt/sysbook/**", "anon");

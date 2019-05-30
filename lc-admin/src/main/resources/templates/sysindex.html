@@ -26,6 +26,20 @@
         #thumbs .swiper-slide-thumb-active{
             opacity: 1;
         }
+        ul{
+            float: left;
+        }
+        .fgzs{
+            display: none;
+            background: #f9e1f7;
+        }
+        #page3_link:hover .fgzs{
+            display: block;
+            clear: both;
+        }
+        .plat li:hover>a{
+            background-color: dimgrey;
+        }
     </style>
 </head>
 <body>
@@ -50,17 +64,32 @@
         <nav class="hidden-sm hidden-xs pull-right">
             <ul>
                 <li id="page1_link" class="active">首页</li>
+            </ul>
+            <ul>
                 <li id="page2_link">服务介绍</li>
+            </ul>
+            <ul>
                 <li id="page3_link">风格展示
-                    <ul style="display: none">
-                        <li><a href='#'>企业管理</a></li>
-                        <li><a href='#'>商业模式咨询</a></li>
-                        <li><a href='#'>科技咨询</a></li>
+                    <ul class="fgzs">
+                        <li><a href='${request.contextPath}/modules/sys/styleindex-1.html'>厦门拍摄</a></li>
+                        <li><a href='${request.contextPath}/modules/sys/styleindex-1.html'>三亚拍摄</a></li>
+                        <li><a href='${request.contextPath}/modules/sys/styleindex-1.html'>婺源拍摄</a></li>
+                        <li><a href='${request.contextPath}/modules/sys/styleindex-1.html'>湘潭拍摄</a></li>
+                        <li><a href='${request.contextPath}/modules/sys/styleindex-1.html'>吉安拍摄</a></li>
+                        <li><a href='${request.contextPath}/modules/sys/styleindex-1.html'>仙女湖拍摄</a></li>
                     </ul>
                 </li>
+            </ul>
+            <ul>
                 <li id="page4_link">关于我们</li>
+            </ul>
+            <ul>
                 <li id="page5_link">联系我们</li>
+            </ul>
+            <ul>
                 <li id="page6_link">拍摄预定</li>
+            </ul>
+            <ul>
                 <li><a href="${request.contextPath}/login4province.html" class="external">管理员登陆</a></li>
             </ul>
         </nav>
