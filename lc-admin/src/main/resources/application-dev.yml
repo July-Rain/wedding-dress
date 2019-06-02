@@ -12,7 +12,7 @@ spring:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.jdbc.Driver
         druid:
-#            url: jdbc:mysql://localhost/cs-shell?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#            url: jdlbc:mysql://localhost/cs-shell?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
             url: jdbc:mysql://127.0.0.1:3306/wedding-dress?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
             username: root
             password: root
